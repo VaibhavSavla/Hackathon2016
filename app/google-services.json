@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "454771636357",
+    "project_id": "useful-shell-703"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454771636357:android:55b9ef20bcb3bbfa",
+        "android_client_info": {
+          "package_name": "com.example.vaibhav.hackathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "454771636357-1j96at3ivkhgbb7a8rgsga7e2bvps2su.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vaibhav.hackathon",
+            "certificate_hash": "DDD372775C0489F1451BDD05BF6EC0DB971ED235"
+          }
+        },
+        {
+          "client_id": "454771636357-6f77bf5f43n2n7lmd0m3nv5iq71mhpkt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIR-nluYCb2oYfclHEIBr9OH9sw-lA9GA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

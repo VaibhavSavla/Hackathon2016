@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Local Secrets</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_choose_role">ChooseRole</string>
+    <string name="title_activity_customer_profile">Profile</string>
+    <string name="title_activity_category_chooser">CategoryChooser</string>
+    <string name="title_activity_brand_chooser">BrandChooser</string>
+    <string name="title_activity_customer_home">Last Minute Deals</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_offer_detail">Offer Details</string>
+    <string name="title_activity_seller_offers">Store Offers</string>
+    <string name="title_activity_add_offer">Add Offer</string>
+    <string name="title_activity_offer_analysis">Offer Analysis</string>
+    <string-array name="category_array">
+        <item>Food</item>
+        <item>LifeStyle</item>
+        <item>Technology</item>
+    </string-array>
+</resources>
