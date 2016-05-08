@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -17,13 +18,13 @@ import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 
 public class OfferAnalysisActivity extends AppCompatActivity {
 
+    public static final String TAG = OfferAnalysisActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +49,8 @@ public class OfferAnalysisActivity extends AppCompatActivity {
                     float negative = (float) response.getDouble("negative");
                     float neutral = (float) response.getDouble("neutral");
 
-                    PieChart chart = (PieChart) findViewById(R.id.chart);
+
+                    PieChart chart = (PieChart) findViewById(R.id.chart_mpandroid);
 
                     ArrayList<Entry> entries = new ArrayList<>();
                     entries.add(new Entry(positive, 0));
@@ -64,9 +66,59 @@ public class OfferAnalysisActivity extends AppCompatActivity {
 
                     PieData data = new PieData(labels, dataset); // initialize Piedata
                     chart.setData(data);
+                    chart.setNoDataText("");
 
                     dataset.setColors(ColorTemplate.COLORFUL_COLORS);
-                } catch (JSONException e) {
+
+
+                    /*DecoView mDecoView = (DecoView) findViewById(R.id.dynamicArcView);
+
+                    mDecoView.addSeries(new SeriesItem.Builder(Color.argb(255, 51, 51, 255))
+                            .setRange(0, 100, 0)
+                            .setSeriesLabel(new SeriesLabel.Builder("")
+                                    .setColorBack(Color.argb(218, 0, 0, 0))
+                                    .setColorText(Color.argb(255, 255, 255, 255))
+                                    .build())
+                            .setInitialVisibility(false)
+                            .setLineWidth(32f)
+                            .build());
+
+                    //Create data series track
+                    SeriesItem seriesItem1 = new SeriesItem.Builder(Color.argb(255, 25, 255, 25))
+                            .setRange(0, positive, positive)
+                            .setSeriesLabel(new SeriesLabel.Builder("Positive")
+                                    .setColorBack(Color.argb(218, 0, 0, 0))
+                                    .setColorText(Color.argb(255, 255, 255, 255))
+                                    .build())
+                            .setLineWidth(32f)
+                            .build();
+
+                    int series1Index = mDecoView.addSeries(seriesItem1);
+
+                    SeriesItem seriesItem2 = new SeriesItem.Builder(Color.argb(255, 25, 255, 25))
+                            .setRange(0, negative, negative)
+                            .setSeriesLabel(new SeriesLabel.Builder("Negative")
+                                    .setColorBack(Color.argb(218, 0, 0, 0))
+                                    .setColorText(Color.argb(255, 255, 255, 255))
+                                    .build())
+                            .setLineWidth(32f)
+                            .build();
+
+                    int series2Index = mDecoView.addSeries(seriesItem2);
+
+                    SeriesItem seriesItem3 = new SeriesItem.Builder(Color.argb(255, 25, 255, 25))
+                            .setRange(0, neutral, neutral)
+                            .setSeriesLabel(new SeriesLabel.Builder("Neutral")
+                                    .setColorBack(Color.argb(218, 0, 0, 0))
+                                    .setColorText(Color.argb(255, 255, 255, 255))
+                                    .build())
+                            .setLineWidth(32f)
+                            .build();
+
+                    int series3Index = mDecoView.addSeries(seriesItem3);*/
+
+                } catch (Exception e) {
+                    Log.e(TAG, "error" + e.toString());
                 }
             }
         }, new Response.ErrorListener() {

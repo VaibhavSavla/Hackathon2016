@@ -38,8 +38,8 @@ dependencies {
 
     compile 'com.android.volley:volley:1.0.0'
 
-    compile 'com.github.bmarrdev:android-DecoView-charting:v0.9.4'
     compile 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+    compile 'com.github.bmarrdev:android-DecoView-charting:v0.9.4'
 
 
 }
